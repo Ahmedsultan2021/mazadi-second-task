@@ -2,83 +2,118 @@
 <template>
   <div>
     <!--Start Header-->
-<header>
-  <div class="container flex flex-col md:flex-row px-5 md:px-20 justify-between my-5">
-    <div class="search flex w-full md:w-9/12 gap-x-0.5">
-      <div class="flex w-full md:w-1/5 items-center gap-x-2 text-Cmain pr-3 bg-red-200 rounded-s-md">
-        <p>مزاد مباشر متعدد</p>
-        <i class="fa-solid fa-chevron-down"></i>
-      </div>
-      <input class="w-full md:w-9/12 items-center pr-5 justify-between rounded-e-md flex bg-red-200" placeholder="ابحث هنا" />
-      <i class="fa-solid text-white fa-magnifying-glass bg-main-color py-3 rounded-md px-5"></i>
-    </div>
-    <div class="logo flex justify-center md:justify-end w-full md:w-1/5 mt-5 md:mt-0">
-      <img src="images/Untitled.png" alt="" />
-    </div>
-  </div>
-</header>
+ <div class="container mx-auto">
+     <header>
+       <div class="px-2 flex flex-col md:flex-row-reverse py-2 gap-3 md:px-10 lg:px-20" >
+         <div class="md:w-4/12 flex justify-center md:justify-end">
+         <img class="block"  src="images/Untitled.png" alt="" />
+         </div>
+        <div class="md:w-11/12 flex flex-col md:flex-row gap-0.5" >
+           <div class="select-wrapper md:w-1/4">
+           <i class="fa-solid fa-chevron-down py-2 left-icon"></i>
+           <select class="text-xs font-semibold w-full bg-search text-Cmain rounded-r py-3 pr-1" name="" id="">
+             <option value="" style="background-color:#FFF4E8; border-width:0px" class="text-black">مزاد مباشر متعدد</option>
+             <option value="" style="background-color:#FFF4E8; border-width:0px" class="text-black">مزاد مباشر متعدد</option>
+             <option value="" style="background-color:#FFF4E8; border-width:0px" class="text-black">مزاد مباشر متعدد</option>
+             <option value="" style="background-color:#FFF4E8; border-width:0px" class="text-black">مزاد مباشر متعدد</option>
+           </select>
+            
+          </div>
+          <div class="md:w-3/4 flex" >
+            <input type="text" class="w-full bg-search text-xs font-semibold	 pr-2 py-3"  placeholder="ابحث هنا">
+             <i
+               class="fa-solid text-white fa-magnifying-glass bg-main-color pt-3 rounded-l px-5"
+             ></i>
+          </div>
+         
+        </div>
+       </div>
+  
+  
+     </header>
+  
+     <!--End Header-->
+     <!--Start Navbar-->
+     <div class="navbar text-white bg-gradient">
+       <div class="flex flex-col md:flex-row justify-between py-5 px-24">
+         <ul class="flex justify-center md:justify-between gap-2 w-full md:w-4/12 text-sm font-extralight		">
+           <li>الرئيسية</li>
+           <li>التصنيفات</li>
+           <li>مشترياتي</li>
+           <li>حسابي</li>
+         </ul>
+         <div class="flex w-full md:w-1/4 justify-center md:justify-end gap-4 mt-5 md:mt-0">
+           <div
+             class="icons w-1/3 md:w-2/5 justify-around text-xl ml-2 items-center flex gap-2"
+           >
+             <img src="images/price_change_black_24dp.svg" alt="" />
+             <i class="fa-regular fa-bell"></i>
+             <i class="fa-solid fa-heart"></i>
+           </div>
+           <div
+             class="flex items-center gap-x-1 text-white px-3 bg-gold rounded-md"
+           >
+             <p>عربية</p>
+             <i class="fa-solid fa-chevron-down"></i>
+           </div>
+         </div>
+       </div>
+     </div>
+  
+ </div>
 
-    <!--End Header-->
-    <!--Start Navbar-->
-   <div class="navbar text-white bg-gradient">
-  <div class="container flex flex-col md:flex-row px-5 md:px-20 justify-between py-5">
-    <ul class="flex justify-between w-full md:w-4/12 text-lg">
-      <li>الرئيسية</li>
-      <li>التصنيفات</li>
-      <li>مشترياتي</li>
-      <li>حسابي</li>
-    </ul>
-    <div class="flex w-full md:w-1/4 justify-between mt-5 md:mt-0">
-      <div class="icons w-1/3 md:w-2/5 justify-around text-xl items-center flex">
-        <img src="images/price_change_black_24dp.svg" alt="" />
-        <i class="fa-regular fa-bell"></i>
-        <i class="fa-solid fa-heart"></i>
-      </div>
-      <div class="flex items-center gap-x-1 text-white px-3 bg-gold rounded-md">
-        <p>العربية</p>
-        <i class="fa-solid fa-chevron-down"></i>
-      </div>
-    </div>
-  </div>
-</div>
-
-
+  
 
     <!--End Navbar-->
     <!--Start Main-->
-    <div class="main mt-10 sm:px-6 md:px-12 lg:px-24">
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
-        <div class="col-span-1 md:col-span-1 pt-5 gap-4">
+    <div class="container mx-auto mt-10">
+      <div
+        class="flex flex-col md:flex-row gap-3 mx-2 md:mx-10 lg:mx-20"
+      >
+        <div
+          class="w-full md:w-1/12 flex flex-row md:flex-col justify-center items-center gap-1 px-0.5 md:items-start md:justify-start"
+        >
+           <div class="md:hidden px-2 bg-white shadow-xl rounded">
+            <i class="fa-solid fa-chevron-right md:hidden py-2"></i>
+          </div>
+          <div class="hidden md:flex md:justify-center px-2 bg-white shadow-xl rounded">
+            <i class="fa-solid fa-chevron-up py-2"></i>
+          </div>
+          <img
+            src="images/car.webp"
+            class="sm:w-auto md:w-10/12 h-14 rounded-md mb-2 sm:mb-0"
+            alt=""
+          />
 
-        <div class="flex flex-row justify-center md:flex-col" >
-            
-            <i class="fa-solid fa-chevron-up py-4"></i>
-            <img
-              src="images/car.webp"
-              class="w-full sm:w-auto md:w-10/12 h-16 rounded-md mb-4 sm:mb-0 md:mb-4"
-              alt=""
-            />
-            <img
-              src="images/car.webp"
-              class="w-full sm:w-auto md:w-10/12 h-16 rounded-md mb-4 sm:mb-0 md:mb-4"
-              alt=""
-            />
-            <img
-              src="images/car.webp"
-              class="w-full sm:w-auto md:w-10/12 h-16 rounded-md mb-4 sm:mb-0 md:mb-4"
-              alt=""
-            />
-            <img
-              src="images/car.webp"
-              class="w-full sm:w-auto md:w-10/12 h-16 rounded-md mb-4 sm:mb-0 md:mb-4"
-              alt=""
-            />
-          
-            <i class="fa-solid fa-chevron-down py-4"></i>
+          <img
+            src="images/car.webp"
+            class="sm:w-auto md:w-10/12 h-14 rounded-md mb-2 sm:mb-0"
+            alt=""
+          />
+          <img
+            src="images/car.webp"
+            class="sm:w-auto md:w-10/12 h-14 rounded-md mb-2 sm:mb-0"
+            alt=""
+          />
+          <img
+            src="images/car.webp"
+            class="sm:w-auto md:w-10/12 h-14 rounded-md mb-2 sm:mb-0 hidden md:block"
+            alt=""
+          />
+          <img
+            src="images/car.webp"
+            class="sm:w-auto md:w-10/12 h-14 rounded-md mb-2 sm:mb-0 hidden md:block"
+            alt=""
+          />
+          <div class="md:hidden bg-white shadow-xl rounded px-2">
+            <i class="fa-solid fa-chevron-left py-2"></i>
+          </div>
+          <div class=" md:justify-center hidden md:flex py-2 bg-white shadow-xl rounded">
+            <i class="fa-solid fa-chevron-down px-2"></i>
+          </div>
         </div>
-        </div>
-        <div class="col-span-1 md:col-span-8">
-          <div class="bg-white rounded-md drop-shadow-2xl px-2 py-3">
+        <div class="w-full md:w-8/12">
+          <div class="bg-white rounded-md drop-shadow-2xl px-2 py-3 ">
             <div
               class="w-12/12 h-96 pt-2"
               style="
@@ -89,9 +124,10 @@
               "
             >
               <div class="flex justify-between px-5 py-4">
-                <div class="flex justify-start gap-x-0.5 items-start w-2/5">
+                <div class="flex justify-start gap-x-0.5 items-start w-4/5">
+                  <p class="w-14 h-8 bg-white rounded-r"></p>
                   <p
-                    class="bg-icon h-8 flex text-xs py-2 px-3 gap-x-5 rounded-e-md items-center"
+                    class="bg-icon h-8 flex text-xs py-2 px-3 gap-x-5 rounded-l items-center"
                   >
                     03-00
                     <span
@@ -103,9 +139,10 @@
                     <i class="fa-solid fa-eye text-xs"></i>
                     236
                   </p>
-                  <p class="w-14 h-8 bg-white rounded-s"></p>
                 </div>
-                <div class="flex justify-between w-1/4">
+                <div
+                  class="flex justify-between gap-2 flex-col lg:flex-row w-1/9 align-middle"
+                >
                   <i
                     class="fa-regular fa-flag w-12 h-12 rounded-full flex justify-center items-center text-white bg-icon"
                   ></i>
@@ -127,11 +164,11 @@
 
               <i
                 style="top: 47px; right: 38px"
-                class="fa-solid fa-heart w-7 text-text h-7 absolute rounded-full flex justify-center items-center bg-white"
+                class="fa-solid shadow-md fa-heart w-7 text-text h-7 absolute rounded-full flex justify-center items-center bg-white"
               ></i>
               <div class="flex flex-col justify-between">
-                <p class="text-sec">اسم البائِع</p>
-                <p class="text-xs">0122445577+</p>
+                <p class="text-lg font-black seller-name">اسم البائِع</p>
+                <p class="text-xs seller-name">0122445577+</p>
               </div>
               <div class="pt-2 pr-2">
                 <i class="fa-solid fa-star text-stone-300"></i>
@@ -142,38 +179,38 @@
               </div>
             </div>
             <div class="pt-5 pr-4">
-              <h4 class="text-2xl">شراء مجموعة من السيارات من موديلا 1990</h4>
-              <p class="text-xs">code 1234</p>
+              <h2 class="text-xl font-extrabold mb-2">
+                شراء مجموعة من السيارات من موديلات 1990
+              </h2>
+              <p class="text-xs font-light">code 1234</p>
             </div>
             <div
               class="flex lg:justify-between items-center pt-5 pr-4 flex-wrap sm:justify-center gap-4"
             >
               <div class="flex justify-between items-center gap-x-2 flex-wrap">
-                <p class="px-3 py-2 bg-red-200 text-Cmain rounded-md">10020+</p>
-                <p class="px-3 py-2 bg-red-200 text-Cmain rounded-md">10020+</p>
-                <p class="px-3 py-2 bg-red-200 text-Cmain rounded-md">10020+</p>
+                <p class="px-3 py-2 bg-search text-Cmain rounded-md">10020+</p>
+                <p class="px-3 py-2 bg-search text-Cmain rounded-md">10020+</p>
+                <p class="px-3 py-2 bg-search text-Cmain rounded-md">10020+</p>
               </div>
               <div>
                 <input
                   type="text"
-                  class="border rounded-md px-2 py-1"
+                  class="border px-2 py-2 w-60"
                   placeholder="اكتب المبلغ"
                 />
-                <button class="bg-gradient px-8 rounded-md py-2 text-white">
-                  تاكيد
-                </button>
+                <button class="bg-gradient px-8 py-2 text-white">تأكيد</button>
               </div>
             </div>
           </div>
           <div class="bg-white rounded-md drop-shadow-2xl px-5 py-3 mt-10">
-            <h5 class="text-2xl mb-2">ارسال رسالة الي البائِع</h5>
+            <h5 class="text-xl font-black mb-2">ارسال رسالة الي البائِع</h5>
             <p class="text-sm">
               يمكنك في وقت البث المباشر ارسال رسالة الي البائِع للاستفسار
             </p>
             <div class="flex items-center mt-5 gap-x-2">
               <input
                 type="text"
-                class="border bg-icon text-black w-11/12 rounded-2xl px-2 py-1"
+                class="border bg-text text-black w-11/12 rounded-2xl px-2 py-1"
                 placeholder="اكتب سؤالك"
               />
               <img src="images/Group5452.svg" alt="" />
@@ -188,7 +225,7 @@
               <p>200 قطعة</p>
             </div>
             <div class="flex justify-between py-2">
-              <p><i class="fa-solid fa-location-dot"></i> البيع لاعلى سعر</p>
+              <p><i class="fa-solid fa-globe"></i> البيع لاعلى سعر</p>
               <p class="text-orange-400">
                 <i class="fa-solid fa-microphone"></i> صوت
               </p>
@@ -199,7 +236,7 @@
 
             <hr class="py-2" />
             <div>
-              <h1 class="font-bold text-xl py-2" >وصف</h1>
+              <h1 class="font-bold text-xl py-2">وصف</h1>
               <p>
                 هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد
                 هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو
@@ -218,7 +255,7 @@
             </div>
             <hr class="my-4" />
             <div>
-              <h1 class="font-bold text-xl py-2" >سياسة الاسترجاع والاستبدال</h1>
+              <h1 class="font-bold text-xl py-2">سياسة الاسترجاع والاستبدال</h1>
               <p>
                 هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد
                 هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو
@@ -237,29 +274,29 @@
             </div>
           </div>
         </div>
-        <div class="col-span-1 md:col-span-3">
-          <div class="py-3 bg-white rounded-md drop-shadow-2xl px-2">
+        <div class="w-full md:w-3/12">
+          <div class="py-2 bg-white rounded-md drop-shadow-2xl px-2">
             <div
               class="flex justify-between bg-neutral-700 p-3 text-white rounded-md"
             >
-              <p>تاريخ البث</p>
-              <p>22-1-2022</p>
+              <p class="text-xs" >تاريخ البث</p>
+              <p class="text-xs" > 22-1-2022</p>
             </div>
             <div
-              class="flex justify-center text-white items-center gap-x-1 py-5"
+              class="flex justify-center text-white items-center gap-x-1 pt-3 pb-2"
             >
               <div class="w-1/2 h-20 bg-sec text-center py-1 rounded-md">
-                <p class="text-sm">القيمة المالية للمزاد</p>
+                <p class="text-xs">القيمة المالية للمزاد</p>
                 <p class="text-lg font-bold">$5000</p>
                 <div
-                  class="flex rounded-lg w-9/12 mt-4 py-0.5 justify-start items-center mx-auto text-sec bg-white"
+                  class=" flex rounded-lg shadow-md w-10/12 mt-4 p-0.5 justify-start items-center mx-auto text-sec bg-white"
                 >
                   <img
                     src="images/men.webp"
                     class="w-6 h-6 rounded-full"
                     alt=""
                   />
-                  <p class="text-xs pr-2">احمد الوائد</p>
+                  <p class="text-xs font-bold">احمد الرائد</p>
                 </div>
               </div>
               <div
@@ -270,9 +307,25 @@
               </div>
             </div>
           </div>
-          <div class="mt-4 bg-white rounded-md drop-shadow-2xl pt-3 px-3">
-            <h5 class="font-bold pr-2">المتنافسون</h5>
-            <div class="flex py-2 my-1 items-center justify-between">
+          <div class="mt-6 bg-white rounded-md drop-shadow-2xl pt-3 px-3">
+            <h5 class="font-extrabold pr-2">المتنافسون</h5>
+            <div class="flex py-1 my-1 items-center justify-between">
+              <div class="text-start flex justify-center">
+                <img
+                  class="w-11 h-11 rounded-full "
+                  src="images/men.webp"
+                  alt=""
+                />
+                <div class="flex pr-2 items-start justify-between flex-col">
+                  <p class="font-bold text-sm" > اسم المزايد</p>
+                  <p class="text-xs font-thin">11.59.21</p>
+                </div>
+              </div>
+              <p class="text-gold font-black text-lg px-3 py-1 rounded-md bg-gold-lite">
+                20+
+              </p>
+            </div>
+            <div class="flex py-1 my-1 items-center justify-between">
               <div class="text-start flex justify-center">
                 <img
                   class="w-11 h-11 rounded-full"
@@ -280,13 +333,15 @@
                   alt=""
                 />
                 <div class="flex pr-2 items-start justify-between flex-col">
-                  <p>احمد الوائد</p>
-                  <p class="text-xs">11.59.21</p>
+                  <p class="font-bold text-sm" > اسم المزايد</p>
+                  <p class="text-xs font-thin">11.59.21</p>
                 </div>
               </div>
-              <p class="text-gold text-xl px-2 py-1 bg-gold-lite">20+</p>
+              <p class="text-gold font-black text-lg px-3 py-1 rounded-md bg-gold-lite">
+                20+
+              </p>
             </div>
-            <div class="flex py-2 my-1 items-center justify-between">
+            <div class="flex py-1 my-1 items-center justify-between">
               <div class="text-start flex justify-center">
                 <img
                   class="w-11 h-11 rounded-full"
@@ -294,13 +349,15 @@
                   alt=""
                 />
                 <div class="flex pr-2 items-start justify-between flex-col">
-                  <p>احمد الوائد</p>
-                  <p class="text-xs">11.59.21</p>
+                  <p class="font-bold text-sm" > اسم المزايد</p>
+                  <p class="text-xs font-thin">11.59.21</p>
                 </div>
               </div>
-              <p class="text-gold text-xl px-2 py-1 bg-gold-lite">20+</p>
+              <p class="text-gold font-black text-lg px-3 py-1 rounded-md bg-gold-lite">
+                20+
+              </p>
             </div>
-            <div class="flex py-2 my-1 items-center justify-between">
+            <div class="flex py-1 my-1 items-center justify-between">
               <div class="text-start flex justify-center">
                 <img
                   class="w-11 h-11 rounded-full"
@@ -308,13 +365,15 @@
                   alt=""
                 />
                 <div class="flex pr-2 items-start justify-between flex-col">
-                  <p>احمد الوائد</p>
-                  <p class="text-xs">11.59.21</p>
+                  <p class="font-bold text-sm" > اسم المزايد</p>
+                  <p class="text-xs font-thin">11.59.21</p>
                 </div>
               </div>
-              <p class="text-gold text-xl px-2 py-1 bg-gold-lite">20+</p>
+              <p class="text-gold font-black text-lg px-3 py-1 rounded-md bg-gold-lite">
+                20+
+              </p>
             </div>
-            <div class="flex py-2 my-1 items-center justify-between">
+            <div class="flex py-1 my-1 items-center justify-between">
               <div class="text-start flex justify-center">
                 <img
                   class="w-11 h-11 rounded-full"
@@ -322,28 +381,17 @@
                   alt=""
                 />
                 <div class="flex pr-2 items-start justify-between flex-col">
-                  <p>احمد الوائد</p>
-                  <p class="text-xs">11.59.21</p>
+                  <p class="font-bold text-sm" > اسم المزايد</p>
+                  <p class="text-xs font-thin">11.59.21</p>
                 </div>
               </div>
-              <p class="text-gold text-xl px-2 py-1 bg-gold-lite">20+</p>
+              <p class="text-gold font-black text-lg px-3 py-1 rounded-md bg-gold-lite">
+                20+
+              </p>
             </div>
-            <div class="flex py-2 my-1 items-center justify-between">
-              <div class="text-start flex justify-center">
-                <img
-                  class="w-11 h-11 rounded-full"
-                  src="images/men.webp"
-                  alt=""
-                />
-                <div class="flex pr-2 items-start justify-between flex-col">
-                  <p>احمد الوائد</p>
-                  <p class="text-xs">11.59.21</p>
-                </div>
-              </div>
-              <p class="text-gold text-xl px-2 py-1 bg-gold-lite">20+</p>
-            </div>
+
           </div>
-          <div class="mt-12 bg-white rounded-md drop-shadow-2xl px-2 py-0.5">
+          <div class="mt-6 bg-white rounded-md drop-shadow-2xl px-2 py-0.5">
             <div
               class="flex items-center py-1 my-2 px-2 bg-text justify-between"
             >
@@ -477,11 +525,14 @@
 </template>
 
 <script>
+
+
+
 export default {
   name: "NuxtTutorial",
 };
 </script>
-<style >
+<style>
 * {
   padding: 0;
   margin: 0;
@@ -489,7 +540,7 @@ export default {
 }
 
 body {
-  font-family: "Cairo", sans-serif;
+  font-family: "Tajawal", sans-serif;
 }
 
 ul,
@@ -515,9 +566,14 @@ a {
   --gold-color-lite: rgba(253, 188, 1, 0.25);
   --background-text: rgba(243, 243, 243, 1);
   --back-icon: rgba(112, 112, 112, 40%);
+  --search: rgb(209, 5, 83, 10%);
+  --seller: #44215D;
 }
 .flex {
   display: flex !important;
+}
+.seller-name{
+  color: var(--seller);
 }
 .bg-main-color {
   background-color: var(--main-color);
@@ -529,6 +585,9 @@ a {
 
 .bg-gradient {
   background-image: var(--background-gradient);
+}
+.bg-search {
+  background-color: var(--search);
 }
 
 .text-gold {
@@ -570,5 +629,29 @@ a {
 .bg-icon {
   background-color: var(--back-icon);
 }
-</style> 
+.select-wrapper {
+  position: relative;
+  display: inline-block;
+}
 
+.select-wrapper i {
+  position: absolute;
+right: 6rem; /* Adjust the value for positioning the icon */
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 10px;
+  color: var(--main-color) ;
+}
+
+.select-wrapper select {
+  appearance: none;
+}
+
+*:focus {
+    outline: none;
+}
+option{
+  font-weight: 800;
+  box-shadow: 0px;
+}
+</style>
