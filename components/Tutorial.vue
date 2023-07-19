@@ -2,118 +2,137 @@
 <template>
   <div>
     <!--Start Header-->
- <div class="container mx-auto">
-     <header>
-       <div class="px-2 flex flex-col md:flex-row-reverse py-2 gap-3 md:px-10 lg:px-20" >
-         <div class="md:w-4/12 flex justify-center md:justify-end">
-         <img class="block"  src="images/Untitled.png" alt="" />
-         </div>
-        <div class="md:w-11/12 flex flex-col md:flex-row gap-0.5" >
-           <div class="select-wrapper md:w-1/4">
-           <i class="fa-solid fa-chevron-down py-2 left-icon"></i>
-           <select class="text-xs font-semibold w-full bg-search text-Cmain rounded-r py-3 pr-1" name="" id="">
-             <option value="" style="background-color:#FFF4E8; border-width:0px" class="text-black">مزاد مباشر متعدد</option>
-             <option value="" style="background-color:#FFF4E8; border-width:0px" class="text-black">مزاد مباشر متعدد</option>
-             <option value="" style="background-color:#FFF4E8; border-width:0px" class="text-black">مزاد مباشر متعدد</option>
-             <option value="" style="background-color:#FFF4E8; border-width:0px" class="text-black">مزاد مباشر متعدد</option>
-           </select>
-            
+    <div class="container mx-auto">
+      <header>
+        <div
+          class="px-2 flex flex-col md:flex-row-reverse py-2 gap-3 md:px-10 lg:px-20"
+        >
+          <div class="md:w-4/12 flex justify-center md:justify-end">
+            <img class="block" src="images/Untitled.png" alt="" />
           </div>
-          <div class="md:w-3/4 flex" >
-            <input type="text" class="w-full bg-search text-xs font-semibold	 pr-2 py-3"  placeholder="ابحث هنا">
-             <i
-               class="fa-solid text-white fa-magnifying-glass bg-main-color pt-3 rounded-l px-5"
-             ></i>
-          </div>
-         
-        </div>
-       </div>
-  
-  
-     </header>
-  
-     <!--End Header-->
-     <!--Start Navbar-->
-     <div class="navbar text-white bg-gradient">
-       <div class="flex flex-col md:flex-row justify-between py-5 px-24">
-         <ul class="flex justify-center md:justify-between gap-2 w-full md:w-4/12 text-sm font-extralight		">
-           <li>الرئيسية</li>
-           <li>التصنيفات</li>
-           <li>مشترياتي</li>
-           <li>حسابي</li>
-         </ul>
-         <div class="flex w-full md:w-1/4 justify-center md:justify-end gap-4 mt-5 md:mt-0">
-           <div
-             class="icons w-1/3 md:w-2/5 justify-around text-xl ml-2 items-center flex gap-2"
-           >
-             <img src="images/price_change_black_24dp.svg" alt="" />
-             <i class="fa-regular fa-bell"></i>
-             <i class="fa-solid fa-heart"></i>
-           </div>
-           <div
-             class="flex items-center gap-x-1 text-white px-3 bg-gold rounded-md"
-           >
-             <p>عربية</p>
-             <i class="fa-solid fa-chevron-down"></i>
-           </div>
-         </div>
-       </div>
-     </div>
-  
- </div>
+          <div class="md:w-11/12 flex flex-col md:flex-row gap-0.5">
+            <div class="select-wrapper md:w-1/4">
 
-  
+              <i class="fa-solid fa-chevron-down py-3 left-icon"></i>
+              <div class="w-full dropdown text-right">
+                <button
+                  @click="toggleDropdown"
+                  class="w-full text-right text-xs font-semibold w-full bg-search text-Cmain rounded-r py-3 pr-2"
+                >
+                  مزاد مباشر متعدد
+                </button>
+                <div
+                  :class="{ 'dropdown-content': true, show: isDropdownOpen }"
+                  id="myDropdown"
+                >
+                  <a class="font-semibold text-sm">مزاد مباشر</a>
+                  <a class="font-semibold text-sm">مزاد مباشر</a>
+                  <a class="font-semibold text-sm">مزاد مباشر</a>
+                  <a class="font-semibold text-sm">مزاد مباشر</a>
+                  <a class="font-semibold text-sm">مزاد مباشر</a>
+                </div>
+              </div>
+
+            </div>
+            <div class="md:w-3/4 flex">
+              <input
+                type="text"
+                class="w-full bg-search text-xs font-semibold pr-2 py-3"
+                placeholder="ابحث هنا"
+              />
+              <i
+                class="fa-solid text-white fa-magnifying-glass bg-main-color pt-3 rounded-l px-5"
+              ></i>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!--End Header-->
+      <!--Start Navbar-->
+      <div class="navbar text-white bg-gradient">
+        <div class="flex flex-col md:flex-row justify-between py-5 px-24">
+          <ul
+            class="flex justify-center md:justify-between gap-2 w-full md:w-4/12 text-sm font-extralight"
+          >
+            <li>الرئيسية</li>
+            <li>التصنيفات</li>
+            <li>مشترياتي</li>
+            <li>حسابي</li>
+          </ul>
+          <div
+            class="flex w-full md:w-1/4 justify-center md:justify-end gap-4 mt-5 md:mt-0"
+          >
+            <div
+              class="icons w-1/3 md:w-2/5 justify-around text-xl ml-2 items-center flex gap-2"
+            >
+              <img src="images/price_change_black_24dp.svg" alt="" />
+              <i class="fa-regular fa-bell"></i>
+              <i class="fa-solid fa-heart"></i>
+            </div>
+            <div
+              class="flex items-center gap-x-1 text-white px-3 bg-gold rounded-md"
+            >
+              <p>عربية</p>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!--End Navbar-->
     <!--Start Main-->
     <div class="container mx-auto mt-10">
-      <div
-        class="flex flex-col md:flex-row gap-3 mx-2 md:mx-10 lg:mx-20"
-      >
+      <div class="flex flex-col md:flex-row gap-3 mx-2 md:mx-10 lg:mx-24">
         <div
-          class="w-full md:w-1/12 flex flex-row md:flex-col justify-center items-center gap-1 px-0.5 md:items-start md:justify-start"
+          class="w-full md:w-1/12 flex flex-row md:flex-col justify-center items-center gap-1 pr-4 md:items-start md:justify-start"
         >
-           <div class="md:hidden px-2 bg-white shadow-xl rounded">
+          <div class="md:hidden px-2 bg-white shadow-xl rounded">
             <i class="fa-solid fa-chevron-right md:hidden py-2"></i>
           </div>
-          <div class="hidden md:flex md:justify-center px-2 bg-white shadow-xl rounded">
+          <div
+            class="hidden md:flex md:justify-center px-2 bg-white shadow-xl rounded"
+          >
             <i class="fa-solid fa-chevron-up py-2"></i>
           </div>
           <img
             src="images/car.webp"
-            class="sm:w-auto md:w-10/12 h-14 rounded-md mb-2 sm:mb-0"
+            class="sm:w-auto md:w-11/12 h-14 rounded-md mb-2 sm:mb-0"
             alt=""
           />
 
           <img
             src="images/car.webp"
-            class="sm:w-auto md:w-10/12 h-14 rounded-md mb-2 sm:mb-0"
+            class="sm:w-auto md:w-11/12 h-14 rounded-md mb-2 sm:mb-0"
             alt=""
           />
           <img
             src="images/car.webp"
-            class="sm:w-auto md:w-10/12 h-14 rounded-md mb-2 sm:mb-0"
+            class="sm:w-auto md:w-11/12 h-14 rounded-md mb-2 sm:mb-0"
             alt=""
           />
           <img
             src="images/car.webp"
-            class="sm:w-auto md:w-10/12 h-14 rounded-md mb-2 sm:mb-0 hidden md:block"
+            class="sm:w-auto md:w-11/12 h-14 rounded-md mb-2 sm:mb-0 hidden md:block"
             alt=""
           />
           <img
             src="images/car.webp"
-            class="sm:w-auto md:w-10/12 h-14 rounded-md mb-2 sm:mb-0 hidden md:block"
+            class="sm:w-auto md:w-11/12 h-14 rounded-md mb-2 sm:mb-0 hidden md:block"
             alt=""
           />
           <div class="md:hidden bg-white shadow-xl rounded px-2">
             <i class="fa-solid fa-chevron-left py-2"></i>
           </div>
-          <div class=" md:justify-center hidden md:flex py-2 bg-white shadow-xl rounded">
+          <div
+            class="md:justify-center hidden md:flex py-2 bg-white shadow-xl rounded"
+          >
             <i class="fa-solid fa-chevron-down px-2"></i>
           </div>
         </div>
         <div class="w-full md:w-8/12">
-          <div class="bg-white rounded-md drop-shadow-2xl px-2 py-3 ">
+          <div class="bg-white rounded-md drop-shadow-2xl px-2 py-3">
             <div
               class="w-12/12 h-96 pt-2"
               style="
@@ -185,20 +204,20 @@
               <p class="text-xs font-light">code 1234</p>
             </div>
             <div
-              class="flex lg:justify-between items-center pt-5 pr-4 flex-wrap sm:justify-center gap-4"
+              class="flex lg:justify-between items-center pt-2 pr-4 flex-wrap sm:justify-center gap-4"
             >
               <div class="flex justify-between items-center gap-x-2 flex-wrap">
                 <p class="px-3 py-2 bg-search text-Cmain rounded-md">10020+</p>
                 <p class="px-3 py-2 bg-search text-Cmain rounded-md">10020+</p>
                 <p class="px-3 py-2 bg-search text-Cmain rounded-md">10020+</p>
               </div>
-              <div>
+              <div class="text-center " >
                 <input
                   type="text"
                   class="border px-2 py-2 w-60"
                   placeholder="اكتب المبلغ"
                 />
-                <button class="bg-gradient px-8 py-2 text-white">تأكيد</button>
+                <button class="bg-gradient px-8 py-2 text-white ">تأكيد</button>
               </div>
             </div>
           </div>
@@ -279,31 +298,31 @@
             <div
               class="flex justify-between bg-neutral-700 p-3 text-white rounded-md"
             >
-              <p class="text-xs" >تاريخ البث</p>
-              <p class="text-xs" > 22-1-2022</p>
+              <p class="text-xs">تاريخ البث</p>
+              <p class="text-xs">22-1-2022</p>
             </div>
             <div
-              class="flex justify-center text-white items-center gap-x-1 pt-3 pb-2"
+              class="flex justify-center text-white items-center gap-x-1 pt-3 pb-2" 
             >
               <div class="w-1/2 h-20 bg-sec text-center py-1 rounded-md">
                 <p class="text-xs">القيمة المالية للمزاد</p>
-                <p class="text-lg font-bold">$5000</p>
+                <p class="text-lg font-black">$5000</p>
                 <div
-                  class=" flex rounded-lg shadow-md w-10/12 mt-4 p-0.5 justify-start items-center mx-auto text-sec bg-white"
+                  class="flex rounded-lg shadow-md w-10/12 mt-4 p-0.5 justify-start items-center mx-auto text-sec bg-white"
                 >
                   <img
                     src="images/men.webp"
                     class="w-6 h-6 rounded-full"
                     alt=""
                   />
-                  <p class="text-xs font-bold">احمد الرائد</p>
+                  <p class="text-xs font-black">احمد الرائد</p>
                 </div>
               </div>
               <div
                 class="w-1/2 h-20 text-center text-sec bg-Csec py-1 rounded-md"
               >
                 <p class="text-xs">القيمة المالية بعد الضريبة</p>
-                <p class="text-xl pt-1 font-bold">$5050</p>
+                <p class="text-xl pt-1 font-black">$5050</p>
               </div>
             </div>
           </div>
@@ -312,16 +331,18 @@
             <div class="flex py-1 my-1 items-center justify-between">
               <div class="text-start flex justify-center">
                 <img
-                  class="w-11 h-11 rounded-full "
+                  class="w-11 h-11 rounded-full"
                   src="images/men.webp"
                   alt=""
                 />
                 <div class="flex pr-2 items-start justify-between flex-col">
-                  <p class="font-bold text-sm" > اسم المزايد</p>
+                  <p class="font-bold text-sm">اسم المزايد</p>
                   <p class="text-xs font-thin">11.59.21</p>
                 </div>
               </div>
-              <p class="text-gold font-black text-lg px-3 py-1 rounded-md bg-gold-lite">
+              <p
+                class="text-gold font-black text-lg px-3 py-1 rounded-md bg-gold-lite"
+              >
                 20+
               </p>
             </div>
@@ -333,11 +354,13 @@
                   alt=""
                 />
                 <div class="flex pr-2 items-start justify-between flex-col">
-                  <p class="font-bold text-sm" > اسم المزايد</p>
+                  <p class="font-bold text-sm">اسم المزايد</p>
                   <p class="text-xs font-thin">11.59.21</p>
                 </div>
               </div>
-              <p class="text-gold font-black text-lg px-3 py-1 rounded-md bg-gold-lite">
+              <p
+                class="text-gold font-black text-lg px-3 py-1 rounded-md bg-gold-lite"
+              >
                 20+
               </p>
             </div>
@@ -349,11 +372,13 @@
                   alt=""
                 />
                 <div class="flex pr-2 items-start justify-between flex-col">
-                  <p class="font-bold text-sm" > اسم المزايد</p>
+                  <p class="font-bold text-sm">اسم المزايد</p>
                   <p class="text-xs font-thin">11.59.21</p>
                 </div>
               </div>
-              <p class="text-gold font-black text-lg px-3 py-1 rounded-md bg-gold-lite">
+              <p
+                class="text-gold font-black text-lg px-3 py-1 rounded-md bg-gold-lite"
+              >
                 20+
               </p>
             </div>
@@ -365,11 +390,13 @@
                   alt=""
                 />
                 <div class="flex pr-2 items-start justify-between flex-col">
-                  <p class="font-bold text-sm" > اسم المزايد</p>
+                  <p class="font-bold text-sm">اسم المزايد</p>
                   <p class="text-xs font-thin">11.59.21</p>
                 </div>
               </div>
-              <p class="text-gold font-black text-lg px-3 py-1 rounded-md bg-gold-lite">
+              <p
+                class="text-gold font-black text-lg px-3 py-1 rounded-md bg-gold-lite"
+              >
                 20+
               </p>
             </div>
@@ -381,15 +408,16 @@
                   alt=""
                 />
                 <div class="flex pr-2 items-start justify-between flex-col">
-                  <p class="font-bold text-sm" > اسم المزايد</p>
+                  <p class="font-bold text-sm">اسم المزايد</p>
                   <p class="text-xs font-thin">11.59.21</p>
                 </div>
               </div>
-              <p class="text-gold font-black text-lg px-3 py-1 rounded-md bg-gold-lite">
+              <p
+                class="text-gold font-black text-lg px-3 py-1 rounded-md bg-gold-lite"
+              >
                 20+
               </p>
             </div>
-
           </div>
           <div class="mt-6 bg-white rounded-md drop-shadow-2xl px-2 py-0.5">
             <div
@@ -525,11 +553,18 @@
 </template>
 
 <script>
-
-
-
 export default {
   name: "NuxtTutorial",
+  data() {
+    return {
+      isDropdownOpen: false,
+    };
+  },
+  methods: {
+    toggleDropdown() {
+      this.isDropdownOpen = !this.isDropdownOpen;
+    },
+  },
 };
 </script>
 <style>
@@ -567,16 +602,20 @@ a {
   --background-text: rgba(243, 243, 243, 1);
   --back-icon: rgba(112, 112, 112, 40%);
   --search: rgb(209, 5, 83, 10%);
-  --seller: #44215D;
+  --seller: #44215d;
+  --drop:#FFF4E8;
 }
 .flex {
   display: flex !important;
 }
-.seller-name{
+.seller-name {
   color: var(--seller);
 }
 .bg-main-color {
   background-color: var(--main-color);
+}
+.bg-drop {
+  background-color: var(--drop);
 }
 
 .text-Cmain {
@@ -636,11 +675,11 @@ a {
 
 .select-wrapper i {
   position: absolute;
-right: 6rem; /* Adjust the value for positioning the icon */
+  right: 6rem; /* Adjust the value for positioning the icon */
   top: 50%;
   transform: translateY(-50%);
   font-size: 10px;
-  color: var(--main-color) ;
+  color: var(--main-color);
 }
 
 .select-wrapper select {
@@ -648,10 +687,57 @@ right: 6rem; /* Adjust the value for positioning the icon */
 }
 
 *:focus {
-    outline: none;
+  outline: none;
 }
-option{
+option {
   font-weight: 800;
   box-shadow: 0px;
+}
+
+.dropbtn {
+  background-color: #3498db;
+  color: var(--drop);
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover,
+.dropbtn:focus {
+  background-color: var(--drop);
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--drop);
+  min-width: 148px;
+  box-shadow: 0px 8px 16px 0px var(--drop);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+  display: block;
 }
 </style>
