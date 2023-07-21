@@ -1,5 +1,5 @@
 import { shallowMount } from '@vue/test-utils';
-import MyComponent from './MyComponent.vue';
+import MyComponent from './Tutorial.vue';
 
 describe('MyComponent', () => {
   test('renders correctly', () => {
